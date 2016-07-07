@@ -1,4 +1,4 @@
-# Simpler Node Config
+# Simpler Express Config
 Simpler Node Config is a singleton style implementation of a Configuration Provider.
 
 ### Conventions
