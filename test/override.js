@@ -1,10 +1,11 @@
 'use strict';
+
 const ConfigProvider = require('../index')(process.cwd() + '/test/mockserver/config/', 'override.json');
 const test = require('tape');
 const request =  require('supertest');
 const server = require('./mockserver/overridenApp');
 
-test('Should be able to read default configuration file', (testing) => {    
+test('Should be able to read default configuration file', (testing) => {
     const expectedConfig = require('./mockserver/config/override.json');
 
     request(server)

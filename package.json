@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run defaulttest && npm run envtest && npm run override",
+    "defaulttest": "./node_modules/.bin/tape ./test/default.js",
+    "envtest": "NODE_ENV=ci ./node_modules/.bin/tape ./test/ci.js",
+    "override": "./node_modules/.bin/tape ./test/override.js",
     "lint": "./node_modules/.bin/eslint . ; exit 0",
     "artifact": "npm pack --production"
   },
@@ -24,8 +27,5 @@
     "express": "^4.14.0",
     "supertest": "^1.2.0",
     "tape": "^4.6.0"
-  },
-  "eslintConfig":{
-    "extends": "google"
   }
 }

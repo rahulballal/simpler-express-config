@@ -1,0 +1,4 @@
+{
+    "extends": "google",
+    "environment": "es6"
+}
