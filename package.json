@@ -1,11 +1,12 @@
 {
-  "name": "simpler-express-config",
+  "name": "@rb/simpler-express-config",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "./node_modules/.bin/eslint . ; exit 0"
+    "lint": "./node_modules/.bin/eslint . ; exit 0",
+    "artifact": "npm pack --production"
   },
   "repository": {
     "type": "git",
